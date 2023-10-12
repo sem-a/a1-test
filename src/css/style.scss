@@ -34,12 +34,14 @@ h2.title {
 }
 .logotype {
     position: absolute;
+    opacity: 0;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
 }
 .section0__title {
+    opacity: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -48,6 +50,7 @@ h2.title {
     z-index: 10;
 }
 .section0__subtitle {
+    opacity: 0;
     width: 100%;
     position: absolute;
     bottom: 47px;
@@ -61,6 +64,7 @@ h2.title {
     color: white;
 }
 .boxes {
+    opacity: 0;
     position: absolute;
     top: 234px;
     left: 50%;
@@ -78,7 +82,8 @@ h2.title {
 
 .mafia__costume {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
+    opacity: 0;
     z-index: 5;
 }
 .dark__costume {
@@ -267,6 +272,19 @@ h2.title {
 
 /*-----------*/
 
+/* animation */
+
+.anim-costume {
+    opacity: 1;
+    bottom: 0;
+    transition: all 1s ease 0s;
+}
+.anim-item {
+    opacity: 1;
+    transition: all 1s ease 0s;
+}
+
+/*------------*/
 
 /* mobile */
 

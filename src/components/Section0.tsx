@@ -1,4 +1,24 @@
+import { useEffect } from 'react';
+
 function Section0() {
+
+    function animOnLoad (className: string, animClassName: string, delay: number) {
+        let animItem = document.getElementsByClassName(className) as HTMLCollectionOf<HTMLElement>;
+        setTimeout( () => {
+            for(let i = 0; i < animItem.length; i++) {
+                animItem[i].classList.add(animClassName);
+            }
+        }, delay);
+    }; 
+    
+    useEffect( () => {
+        animOnLoad('mafia__costume', 'anim-costume', 1000);
+        animOnLoad('logotype', 'anim-item', 1600);
+        animOnLoad('boxes', 'anim-item', 2000);
+        animOnLoad('section0__title', 'anim-item', 2400);
+        animOnLoad('section0__subtitle', 'anim-item', 2800);
+    }, []);
+
     return (
         <section className="section0">
             <div className="container">
